@@ -19,7 +19,7 @@ npx expo install @react-native-async-storage/async-storage
 
 Install react-native-safe-area-context:
 GitHub: react-native-safe-area-context
-npx expo install @react-native-safe-area-context
+npx expo install react-native-safe-area-context
 
 Start Expo server:
 npx expo start
