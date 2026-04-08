@@ -24,11 +24,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "experiments": {
-      "router": {
-        "appRoot": "app"
-      }
     }
   }
 }
