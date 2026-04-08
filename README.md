@@ -1,5 +1,5 @@
 # parliament-browser
-Information about the perliament of the Åland Islands. Utilizes the [public API] (https://docs.google.com/spreadsheets/d/1HdBhAk9AooU_ADdbNdQ3k-GBEvMnf4b8wdF6RtBTaVo/edit?gid=0#gid=0)\
+Information about the perliament of the Åland Islands. Utilizes the [public API](https://docs.google.com/spreadsheets/d/1HdBhAk9AooU_ADdbNdQ3k-GBEvMnf4b8wdF6RtBTaVo/edit?gid=0#gid=0).\
 **Uses Expo verion 54.**
 
 ## To run (I tested this myself):
@@ -13,7 +13,7 @@ Information about the perliament of the Åland Islands. Utilizes the [public API
 4) Filter/Search field not implemented.
 
 ## Usage of AI:
-The picture on the welcome page is AI generated.
+The picture on the welcome page is AI generated.\
 Most of the code is also AI. I have checked the code, trying to learn from it.
 >(Explanation: I actually have no/very little knowledge of JavaScrip so I am learning that at the same time and actually I couldn't write this code myself with my current knowledge - and for me this is a volontary course (Öppna Universitetet) - not part of my education, so I allow myself to bend the rules.)
 
