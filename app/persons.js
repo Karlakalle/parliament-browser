@@ -10,11 +10,13 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ListItem } from "@rneui/themed";
+import { useRouter } from "expo-router";
 import { PersonsContext } from "./_layout";
 
 export default function PersonsPage() {
   const { persons, setPersons } = useContext(PersonsContext);
   const [loading, setLoading] = useState(!persons.length);
+  const router = useRouter();
 
   useEffect(() => {
     if (!persons.length) {
@@ -39,7 +41,10 @@ export default function PersonsPage() {
     const hasImage = item.image && item.image.url;
 
     return (
-      <ListItem containerStyle={styles.listItem}>
+      <ListItem
+        containerStyle={styles.listItem}
+        onPress={() => router.push(`/person/${item.id}`)}
+      >
         <View style={styles.imageContainer}>
           {hasImage ? (
             <Image source={{ uri: item.image.url }} style={styles.image} />
@@ -49,16 +54,6 @@ export default function PersonsPage() {
         </View>
         <ListItem.Content>
           <ListItem.Title style={styles.name}>{item.name}</ListItem.Title>
-          <View style={styles.detailsContainer}>
-            <Text style={styles.detail}>
-              {item.born ? `Birthday: ${item.born}` : "Birthday: N/A"}
-            </Text>
-            <Text style={styles.detail}>
-              {item.address && item.city
-                ? `${item.address}, ${item.city}`
-                : item.address || item.city || "Address: N/A"}
-            </Text>
-          </View>
         </ListItem.Content>
       </ListItem>
     );
@@ -116,13 +111,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
     marginBottom: 8,
-  },
-  detailsContainer: {
-    marginTop: 5,
-  },
-  detail: {
-    fontSize: 12,
-    color: "#666",
-    marginVertical: 2,
   },
 });
